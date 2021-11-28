@@ -1,7 +1,8 @@
 <form [formGroup]="loginForm" class="card componentStyle">
 
     <div class="form-group mb-3">
-        <!-- <label for="txtName">User Name</label> -->
+        <label for="txtName">User Name</label>
+        <!-- //added label -->
         <input placeholder="User Name" formControlName="userName" type="text" id="txtName" class="form-control">
         <div *ngIf="usernamee.touched && usernamee.invalid">
 
@@ -20,7 +21,7 @@
         </div>
     </div>
     <div class="form-group mb-3">
-        <!-- <label for="txtPassword">Password</label> -->
+        <label for="txtPassword">Password</label>
         <input placeholder="Password" formControlName="password" type="password" id="txtPassword" class="form-control">
         <div *ngIf="passwordd.touched && passwordd.invalid">
             <div class="alert alert-danger" *ngIf="passwordd.errors.required">

@@ -1,8 +1,8 @@
 <form [formGroup]="loginForm" class="card componentStyle">
 
     <div class="form-group mb-3">
-        <!-- <label for="txtName">User Name</label> -->
-        <input placeholder="User Name" formControlName="userName" type="text" id="txtName" class="form-control">
+        <label for="txtName">User Name</label>
+        <input formControlName="userName" type="text" id="txtName" class="form-control">
         <div *ngIf="usernamee.touched && usernamee.invalid">
 
             <div class="alert alert-danger" *ngIf="usernamee.errors.required">
@@ -14,7 +14,7 @@
             </div>
             <div class="alert alert-danger" *ngIf="usernamee.errors.withoutSpaces">
 
-                No Spaces were allowed component changed by me
+                No Spaces were allowed
             </div>
 
         </div>

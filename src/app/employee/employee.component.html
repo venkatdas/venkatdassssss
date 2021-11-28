@@ -1,0 +1,33 @@
+<div class="card componentStyle">
+
+  <table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th>
+          #Id
+        </th>
+        <th>
+          Name
+        </th>
+        <th>
+          Email
+        </th>
+        <th>
+          Salary
+        </th>
+        <th>
+          Action
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of lstEmployee">
+        <td>{{employee.id}}</td>
+        <td>{{employee.name}}</td>
+        <td>{{employee.email}}</td>
+        <td>{{employee.salary}}</td>
+        <td> <a [routerLink]="['/employee',employee.id]">View</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

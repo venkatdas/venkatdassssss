@@ -1,0 +1,42 @@
+
+<h3>   {{title}}</h3>
+
+<div [hidden]="false" >Welcome to hidden element</div>
+<div [hidden]="courses.length>0">list of courses</div>
+<div [hidden]="courses.length==0"> no courses yet</div>
+<!-- <div *ngIf="courses.length>0 ; then listCourses else ngCourses"></div> -->
+<!-- <ng-template #ngCourses>
+    <div>No Courses Yet</div>
+</ng-template>
+<ng-template #listCourses>
+    <div> List of courses </div>
+</ng-template> -->
+<!-- <div *ngIf="courses.length==0">No courses Yet</div> -->
+
+<!-- <h1>list of languages available </h1> -->
+<h1 appDirlist>Using custom Directive</h1>
+<!-- <button [appDirlist]="color">Click Me</button> -->
+
+<ul>    
+    <li *ngFor ="let value of  courses">    
+   {{value}}
+    </li>
+</ul>
+<!-- 
+<div>
+    <input type="radio" name="colors" (click)="color='Red'">Red
+    <input type="radio" name="colors" (click)="color='cyan'">cyan
+    <input type="radio" name="colors" (click)="color='cyan'">Cyan
+
+</div> -->
+
+<h1>Structural Attribute Directive</h1>
+
+<h2>Pick a highlight color</h2>
+<div>
+  <input type="radio" name="colors" (click)="color='lightgreen'">Green
+  <input type="radio" name="colors" (click)="color='yellow'">Yellow
+  <input type="radio" name="colors" (click)="color='Red'">Red
+</div>
+
+<p [appDirlist]="color"> Highlight Me!!!</p>

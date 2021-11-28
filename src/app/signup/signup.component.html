@@ -1,0 +1,47 @@
+<form (ngSubmit)="register()" [formGroup]=" signupForm" class="card componentStyle">
+    <div class="form-group">
+        <label for="txtFirstName">First Name</label>
+        <input type="text" id="txtFirstName" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="txtLastName">Last Name</label>
+        <input type="text" id="txtLastName" class="form-control">
+    </div>
+    <div *ngIf="signupEmaill.pending" class="spinner-border spinner-border-sm" role="status">
+        <span class="visually-hidden">Loading....</span>
+
+    </div>
+
+    <div class="form-group">
+        <label for="txtEmail">Email</label>
+        <input formControlName="signupEmail" type="text" id="txtEmail" class="form-control">
+        <div *ngIf="signupEmaill.touched && signupEmaill.invalid">
+            <div class="alert alert-danger" *ngIf="signupEmaill.errors.required">
+                Email is Mandatory
+            </div>
+            <div class="alert alert-danger" *ngIf="signupEmaill.errors.withoutSpaces">
+                No Space Is Alowed
+            </div>
+            <div class="alert alert-danger" *ngIf="signupEmaill.errors.beUnique">
+                Email Should be unique
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="txtPassword">Password</label>
+        <input formControlName="signupPassword" type="password" id="txtPassword" class="form-control">
+
+        <div *ngIf="signupPasswordd.touched && signupPasswordd.invalid">
+            <div class="alert alert-danger" *ngIf="signupPasswordd.errors.required">
+                Password Mandatory
+            </div>
+            <div class="alert alert-danger" *ngIf="signupPasswordd.errors.pattern">
+                Use 8 or more characters with a mix of letters, numbers & symbols
+            </div>
+        </div>
+    </div>
+    <div style="margin-top: 10px;">
+        <button class="btn btn-primary" type="submit">SignUp</button>
+    </div>
+</form>

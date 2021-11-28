@@ -1,0 +1,31 @@
+<!-- 
+<b>{{name | uppercase}}  </b> 
+<h2>{{name | lowercase}}</h2>
+<h2>{{name | titlecase}}</h2>
+<h2>{{name | slice: 3:9}}</h2>
+<h2>{{jsonval| json}}</h2>
+<h2>{{months | slice:5:9}}</h2>
+<h2>{{9.678 | number:'1.2-3'}}</h2>
+<h2>{{9.678 | number:'5.2-3'}}</h2>
+<h2>{{9.678 | number:'1.2-5'}}</h2>
+<b>{{1555 | currency:'USD'}}  </b> <br/>
+<b>{{1555 | currency:'INR'}}  </b>  -->
+<div class="container">
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label for="txtName">Name </label>
+            <input [(ngModel)]="result" type="text" class="form-control" id="txtName">
+        </div>
+  
+
+        <div class="row">
+            <label for="txtResult">Output </label>
+            <h2 >{{result| letters}}</h2>
+                                 <!-- <h2  >{{result| letters}}</h2>
+            
+            
+                                 <h2  >{{result| letters}}</h2> -->
+        </div>
+
+    </div>
+</div>

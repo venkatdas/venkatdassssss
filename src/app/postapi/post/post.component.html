@@ -1,0 +1,30 @@
+<div class="card componentStyle">
+
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th>
+                    #Id
+                </th>
+                <th>
+                    UserId
+                </th>
+                <th>
+                    Titile
+                </th>
+                <th>
+                    Body
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let post of lstPosts">
+                <td>{{post.id}}</td>
+                <td>{{post.userId}}</td>
+                <td>{{post.title}}</td>
+                <td>{{post.body}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
